@@ -25,7 +25,7 @@ def format line
 	#puts "Expression: #{expression}"
 	#puts "Meaning:    #{meaning}"
 	#puts "Reading:    #{reading}"
-	return "#{expression}\t#{meaning}\t#{reading}\ty\ty"
+	return "#{expression}\t#{meaning}\t#{expression}[#{reading}]"
 end
 
 def fputs line
