@@ -2,8 +2,8 @@
 # Copyright: 2013 Paul Traylor
 # These sources are released under the terms of the MIT license: see LICENSE
 $TAGS   = "tags: Import Rikaichan #{Time::now().strftime('%Y-%m-%d')}"
-$SOURCE = File.expand_path '~/Dropbox/Documents/rikaichan.txt'
-$DEST   = File.dirname(__FILE__) + '/rikaichan.output.txt'
+$SOURCE = File.expand_path './rikaichan.txt'
+$DEST   = File.dirname(__FILE__) + '/anki.txt'
 
 $input = File.new($SOURCE, "r")
 $output = File.new($DEST,'w')
@@ -32,8 +32,6 @@ def fputs line
 	puts line
 	$output << "#{line}\n"
 end
-
-fputs $TAGS
 
 while(line = $input.gets)
 	words = format line
